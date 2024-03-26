@@ -71,16 +71,16 @@ def main(argv):
         elif opt in ("-d", "--debug"):
             try:
                 arg = int(arg)
-                log.debug("Debug level received: " + str(arg))
+                log.debug("Debug level received: %s", str(arg))
             except ValueError:
                 log.warning("Invalid log level: " + arg)
                 continue
 
             if 0 <= arg <= 5:
                 log.setLevel(60 - (arg*10))
-                log.critical("Log level changed to: " + str(logging.getLevelName(60 - (arg*10))))
+                log.critical("Log level changed to: %s", str(logging.getLevelName(60 - (arg*10))))
             else:
-                log.warning("Invalid log level: " + str(arg))
+                log.warning("Invalid log level: %s", str(arg))
 
     infile = None
     outfile = None
