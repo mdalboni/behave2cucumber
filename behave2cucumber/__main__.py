@@ -46,7 +46,7 @@ def usage():
 
     global options
     l = len(options['long'])
-    options['shortlist'] = [s for s in options['short'] if s is not ":"]
+    options['shortlist'] = [s for s in options['short'] if s != ":"]
 
     print("python -m behave2cucumber [-h] [-d level|--debug=level]")
     for i in range(l):
